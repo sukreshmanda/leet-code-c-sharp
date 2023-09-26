@@ -1,14 +1,18 @@
-class Solution
+namespace TwoSum
 {
-    public int[] TwoSum(int[] nums, int target)
+
+    class Solution
     {
-        for (int i = 0; i < nums.Length; i++)
+        public int[] TwoSum(int[] nums, int target)
         {
-            for (int j = i + 1; j < nums.Length; j++)
+            for (int i = 0; i < nums.Length; i++)
             {
-                if (nums[i] + nums[j] == target) return new int[] { i, j };
+                for (int j = i + 1; j < nums.Length; j++)
+                {
+                    if (nums[i] + nums[j] == target) return new int[] { i, j };
+                }
             }
+            return new int[] { };
         }
-        return new int[] { };
     }
 }
